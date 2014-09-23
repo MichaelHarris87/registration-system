@@ -1,10 +1,13 @@
 <?php
+$page = $_GET['page'];
 
-include('header.php');
+include_once('header.php');
 // Content Module
-include('login.php');
+include('protected_page.php');
+
+
 // More Content
-include('footer.php');
+include_once('footer.php');
 
 ?>
  

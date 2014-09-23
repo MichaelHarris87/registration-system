@@ -1,13 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 body {
     padding-top:80px;
-    font-family: "Avenir","helvetica neue","helvetica","arial";
+    font-family: 'Lato', 'sans-serif';
     font-size: 14px;
     line-height: 1.428571429;
     color: #333;
     background-color: #fff;
-    background: #f1f1f1 url("../img/bg2x.jpg") repeat;
-    background-image: -webkit-image-set(url("../img/bg2x.jpg") 1x, url("../img/bg2x.jpg") 2x);
-    background-size: 135px 91px;
+    background: #f1f1f1 url("http://subtlepatterns.com/patterns/old_map.png") repeat;
+    background-image: -webkit-image-set(url("http://subtlepatterns.com/patterns/old_map.png") 1x, url("http://subtlepatterns.com/patterns/old_map.png") 2x);
+    background-size: 135px 91px;}
+
+}
+.profile
+{
+    min-height: 355px;
+    display: inline-block;
 }
 ul, menu, dir {
     display: block;
@@ -56,7 +63,7 @@ ul, menu, dir {
 }
 .navbar-footer-content { padding:15px 15px 15px 15px; }
 .dropdown-menu {
-    padding: 0px;
+    padding: 8px;
     overflow: hidden;
 }
 .label,.glyphicon { margin-right:5px; }
@@ -84,6 +91,9 @@ ul, menu, dir {
     box-shadow: 3px 3px 0px transparent;
     transition: 0.5s;
 }
+.panel {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
 .footer {
     padding-top: 25px;
     padding-bottom: 15px;
@@ -97,4 +107,87 @@ ul, menu, dir {
         float: left;
         margin: 0;
     }
+}
+
+#output{
+    position: absolute;
+    width: 300px;
+    top: -75px;
+    left: 0;
+    color: #fff;
+}
+
+#output.alert-success{
+    background: rgb(25, 204, 25);
+}
+
+#output.alert-danger{
+    background: rgb(228, 105, 105);
+}
+.form-box input{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    height:40px;
+    border: 1px solid #ccc;;
+    background: #fafafa;
+    transition:0.2s ease-in-out;
+
+}
+
+.form-box input:focus{
+    outline: 0;
+    background: #eee;
+}
+
+.form-box input[type="text"]{
+    border-radius: 5px 5px 0 0;
+    text-transform: lowercase;
+}
+
+.form-box input[type="password"]{
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
+}
+
+.form-box button.login{
+    margin-top:15px;
+    padding: 10px 20px;
+}
+
+
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
 }
